@@ -1,4 +1,4 @@
-extern int _app_start[0xc000]; // Only first 3 sectors of size 0x4000 are used
+extern int app_start[0xc000]; // Only first 3 sectors of size 0x4000 are used
 
 bool generated_can_traffic = false;
 
@@ -146,8 +146,8 @@ int comms_control_handler(ControlPacket_t *req, uint8_t *resp) {
     case 0xd3:
       {
         resp_len = 64;
-        char * code = (char*)_app_start;
-        int code_len = _app_start[0];
+        char * code = (char*)app_start;
+        int code_len = app_start[0];
         (void)memcpy(resp, &code[code_len], resp_len);
       }
       break;
@@ -155,8 +155,8 @@ int comms_control_handler(ControlPacket_t *req, uint8_t *resp) {
     case 0xd4:
       {
         resp_len = 64;
-        char * code = (char*)_app_start;
-        int code_len = _app_start[0];
+        char * code = (char*)app_start;
+        int code_len = app_start[0];
         (void)memcpy(resp, &code[code_len + 64], resp_len);
       }
       break;
