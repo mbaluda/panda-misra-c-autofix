@@ -54,7 +54,7 @@ int comms_control_handler(ControlPacket_t *req, uint8_t *resp) {
     case 0xd0:
       // addresses are OTP
       if (req->param1 == 1) {
-        memcpy(resp, (void *)DEVICE_SERIAL_NUMBER_ADDRESS, 0x10);
+        memcpy(resp, (uint8_t *)DEVICE_SERIAL_NUMBER_ADDRESS, 0x10);
         resp_len = 0x10;
       } else {
         get_provision_chunk(resp);
