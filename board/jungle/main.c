@@ -162,7 +162,7 @@ int main(void) {
       // fill up all the queues
       can_ring *qs[] = {&can_tx1_q, &can_tx2_q, &can_tx3_q};
       for (int j = 0; j < 3; j++) {
-        for (uint16_t n = 0U; n < can_slots_empty(qs[j]); n++) {
+        for (uint32_t n = 0U; n < can_slots_empty(qs[j]); n++) {
           uint16_t i = cnt % 100U;
           CANPacket_t to_send;
           to_send.returned = 0U;
