@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_SYS_FAULTS_H
+#define PANDA_BOARD_SYS_FAULTS_H
+
 #include "board/sys/sys.h"
 
 uint8_t fault_status = FAULT_STATUS_NONE;
@@ -23,3 +26,5 @@ void fault_recovered(uint32_t fault) {
     print("Cannot recover from a permanent fault!\n");
   }
 }
+
+#endif  // PANDA_BOARD_SYS_FAULTS_H
