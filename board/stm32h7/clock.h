@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_CLOCK_H
+#define PANDA_BOARD_STM32H7_CLOCK_H
+
 /*
 HSE: 25MHz
 PLL1Q: 80MHz (for FDCAN)
@@ -118,3 +121,5 @@ void clock_init(void) {
   //Enable Vdd33usb supply level detector
   register_set_bits(&(PWR->CR3), PWR_CR3_USB33DEN);
 }
+
+#endif  // PANDA_BOARD_STM32H7_CLOCK_H

@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_SOUND_H
+#define PANDA_BOARD_STM32H7_SOUND_H
+
 #define SOUND_RX_BUF_SIZE 1000U
 #define SOUND_TX_BUF_SIZE (SOUND_RX_BUF_SIZE/2U)
 #define MIC_RX_BUF_SIZE 512U
@@ -226,3 +229,5 @@ void sound_init(void) {
   NVIC_EnableIRQ(BDMA_Channel0_IRQn);
   NVIC_EnableIRQ(DMA1_Stream0_IRQn);
 }
+
+#endif  // PANDA_BOARD_STM32H7_SOUND_H

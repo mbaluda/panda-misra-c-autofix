@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLFAN_H
+#define PANDA_BOARD_STM32H7_LLFAN_H
+
 // TACH interrupt handler
 static void EXTI2_IRQ_Handler(void) {
   volatile unsigned int pr = EXTI->PR1 & (1U << 2);
@@ -21,3 +24,5 @@ void llfan_init(void) {
   register_set_bits(&(EXTI->FTSR1), (1U << 2));
   NVIC_EnableIRQ(EXTI2_IRQn);
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLFAN_H
