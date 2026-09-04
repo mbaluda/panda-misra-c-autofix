@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_SYS_CRITICAL_H
+#define PANDA_BOARD_SYS_CRITICAL_H
+
 #include "board/sys/sys.h"
 
 // ********************* Critical section helpers *********************
@@ -14,3 +17,5 @@ void disable_interrupts(void) {
   interrupts_enabled = false;
   __disable_irq();
 }
+
+#endif  // PANDA_BOARD_SYS_CRITICAL_H

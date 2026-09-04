@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PANDA_BOARD_SYS_SYS_H
+#define PANDA_BOARD_SYS_SYS_H
 
 // ******************** critical ********************
 
@@ -61,3 +62,5 @@ void fault_recovered(uint32_t fault);
 extern bool power_save_enabled;
 
 void set_power_save_state(bool enable);
+
+#endif  // PANDA_BOARD_SYS_SYS_H
