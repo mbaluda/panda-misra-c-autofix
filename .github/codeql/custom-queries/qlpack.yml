@@ -1,0 +1,4 @@
+name: commaai/panda-misra-c-custom-queries
+version: 0.0.1
+dependencies:
+  codeql/misra-c-coding-standards: 2.62.0
