@@ -22,6 +22,9 @@
  * limitations under the License.
  */
 
+#ifndef CORE_CM7_H
+#define CORE_CM7_H
+
 #if   defined ( __ICCARM__ )
   #pragma system_include         /* treat file as system include file for MISRA check */
 #elif defined (__clang__)
@@ -2723,3 +2726,5 @@ __STATIC_INLINE int32_t ITM_CheckChar (void)
 #endif /* __CORE_CM7_H_DEPENDANT */
 
 #endif /* __CMSIS_GENERIC */
+
+#endif /* CORE_CM7_H */
