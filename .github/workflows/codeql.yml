@@ -57,13 +57,27 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Install custom query dependencies
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      shell: bash
+      run: |
+        curl --fail --location --retry 3 \
+          --output "${RUNNER_TEMP}/codeql-bundle.tar.gz" \
+          https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.21.4/codeql-bundle-linux64.tar.gz
+        mkdir -p "${RUNNER_TEMP}/codeql-bundle"
+        tar -xzf "${RUNNER_TEMP}/codeql-bundle.tar.gz" \
+          -C "${RUNNER_TEMP}/codeql-bundle"
+        "${RUNNER_TEMP}/codeql-bundle/codeql/codeql" pack ci \
+          .github/codeql/custom-queries
       
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
       with:
         debug: true
-        tools: https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.21.4/codeql-bundle-linux64.tar.gz
+        tools: ${{ runner.temp }}/codeql-bundle.tar.gz
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
         # If you wish to specify custom queries, you can do so here or in a config file.
