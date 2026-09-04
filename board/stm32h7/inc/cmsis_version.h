@@ -22,8 +22,8 @@
  * limitations under the License.
  */
 
-#ifndef __CMSIS_VERSION_H
-#define __CMSIS_VERSION_H
+#ifndef CMSIS_VERSION_H
+#define CMSIS_VERSION_H
 
 #if   defined ( __ICCARM__ )
   #pragma system_include         /* treat file as system include file for MISRA check */
