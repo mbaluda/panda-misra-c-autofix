@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DRIVERS_SPI_H
+#define DRIVERS_SPI_H
 
 #include "board/drivers/drivers.h"
 
@@ -256,3 +257,5 @@ void spi_tx_done(bool reset) {
 void can_tx_comms_resume_spi(void) {
   spi_can_tx_ready = true;
 }
+
+#endif

@@ -1,4 +1,7 @@
 
+#ifndef DRIVERS_LED_H
+#define DRIVERS_LED_H
+
 #define LED_RED 0U
 #define LED_GREEN 1U
 #define LED_BLUE 2U
@@ -30,3 +33,5 @@ void led_init(void) {
     led_set(i, false);
   }
 }
+
+#endif

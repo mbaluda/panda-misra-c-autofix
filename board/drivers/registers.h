@@ -1,3 +1,6 @@
+#ifndef DRIVERS_REGISTERS_H
+#define DRIVERS_REGISTERS_H
+
 #include "board/drivers/drivers.h"
 
 typedef struct reg {
@@ -75,3 +78,5 @@ void init_registers(void) {
     register_map[i].check_mask = 0U;
   }
 }
+
+#endif

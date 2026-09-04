@@ -1,3 +1,6 @@
+#ifndef DRIVERS_FAN_H
+#define DRIVERS_FAN_H
+
 #include "board/drivers/drivers.h"
 
 struct fan_state_t fan_state;
@@ -46,3 +49,5 @@ void fan_tick(void) {
     current_board->set_fan_enabled((fan_state.power > 0U) || (fan_state.cooldown_counter > 0U));
   }
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef DRIVERS_USB_H
+#define DRIVERS_USB_H
+
 #include "board/drivers/drivers.h"
 
 // IRQs: OTG_FS
@@ -876,3 +879,5 @@ void can_tx_comms_resume_usb(void) {
   }
   EXIT_CRITICAL();
 }
+
+#endif
