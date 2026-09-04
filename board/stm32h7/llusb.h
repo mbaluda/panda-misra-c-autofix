@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLUSB_H
+#define PANDA_BOARD_STM32H7_LLUSB_H
+
 #include "llusb_declarations.h"
 
 USB_OTG_GlobalTypeDef *USBx = USB_OTG_HS;
@@ -77,3 +80,5 @@ void usb_init(void) {
   // enable the IRQ
   NVIC_EnableIRQ(OTG_HS_IRQn);
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLUSB_H

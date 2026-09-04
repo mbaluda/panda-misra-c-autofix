@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLSPI_H
+#define PANDA_BOARD_STM32H7_LLSPI_H
+
 // master -> panda DMA start
 // cppcheck-suppress constParameterPointer ; RX DMA writes through addr after return
 void llspi_mosi_dma(uint8_t *addr, int len) {
@@ -106,3 +109,5 @@ void llspi_init(void) {
   NVIC_EnableIRQ(DMA2_Stream3_IRQn);
   NVIC_EnableIRQ(SPI4_IRQn);
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLSPI_H

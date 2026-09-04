@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLUART_H
+#define PANDA_BOARD_STM32H7_LLUART_H
+
 static void uart_rx_ring(uart_ring *q){
   // Do not read out directly if DMA enabled
   ENTER_CRITICAL();
@@ -100,3 +103,5 @@ void uart_init(uart_ring *q, unsigned int baud) {
     NVIC_EnableIRQ(UART7_IRQn);
   }
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLUART_H

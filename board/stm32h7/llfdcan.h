@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLFDCAN_H
+#define PANDA_BOARD_STM32H7_LLFDCAN_H
+
 #include "llfdcan_declarations.h"
 
 // kbps multiplied by 10
@@ -225,3 +228,5 @@ void llcan_clear_send(FDCAN_GlobalTypeDef *FDCANx) {
   bool ret = llcan_init(FDCANx);
   UNUSED(ret);
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLFDCAN_H

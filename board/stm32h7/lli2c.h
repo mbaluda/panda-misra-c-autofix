@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLI2C_H
+#define PANDA_BOARD_STM32H7_LLI2C_H
+
 // TODO: this driver relies heavily on polling,
 // if we want it to be more async, we should use interrupts
 
@@ -165,3 +168,5 @@ void i2c_init(I2C_TypeDef *I2C) {
 
   i2c_reset(I2C);
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLI2C_H

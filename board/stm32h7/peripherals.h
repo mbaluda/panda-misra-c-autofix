@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_PERIPHERALS_H
+#define PANDA_BOARD_STM32H7_PERIPHERALS_H
+
 #ifdef BOOTSTUB
 void gpio_usb_init(void) {
 #else
@@ -134,3 +137,5 @@ void peripherals_init(void) {
 void enable_interrupt_timer(void) {
   register_set_bits(&(RCC->APB1LENR), RCC_APB1LENR_TIM6EN); // Enable interrupt timer peripheral
 }
+
+#endif  // PANDA_BOARD_STM32H7_PERIPHERALS_H

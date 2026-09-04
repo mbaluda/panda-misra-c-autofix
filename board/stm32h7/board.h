@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_BOARD_H
+#define PANDA_BOARD_STM32H7_BOARD_H
+
 // ///////////////////////////////////////////////////////////// //
 // Hardware abstraction layer for all different supported boards //
 // ///////////////////////////////////////////////////////////// //
@@ -48,3 +51,5 @@ void detect_board_type(void) {
     print("Hardware type is UNKNOWN!\n");
   }
 }
+
+#endif  // PANDA_BOARD_STM32H7_BOARD_H

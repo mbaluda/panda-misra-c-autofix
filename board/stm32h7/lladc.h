@@ -1,3 +1,6 @@
+#ifndef PANDA_BOARD_STM32H7_LLADC_H
+#define PANDA_BOARD_STM32H7_LLADC_H
+
 #include "lladc_declarations.h"
 
 static uint32_t adc_avdd_mV = 0U;
@@ -78,3 +81,5 @@ uint16_t adc_get_mV(const adc_signal_t *signal) {
   } else {}
   return ret;
 }
+
+#endif  // PANDA_BOARD_STM32H7_LLADC_H
