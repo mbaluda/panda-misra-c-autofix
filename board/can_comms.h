@@ -34,13 +34,13 @@
     which is sent by the host on each start of a connection.
 */
 
-typedef struct asm_buffer {
+struct asm_buffer {
   uint32_t ptr;
   uint32_t tail_size;
   uint8_t data[72];
-} asm_buffer;
+};
 
-static asm_buffer can_read_buffer = {.ptr = 0U, .tail_size = 0U};
+static struct asm_buffer can_read_buffer = {.ptr = 0U, .tail_size = 0U};
 
 int comms_can_read(uint8_t *data, uint32_t max_len) {
   uint32_t pos = 0U;
@@ -75,7 +75,7 @@ int comms_can_read(uint8_t *data, uint32_t max_len) {
   return pos;
 }
 
-static asm_buffer can_write_buffer = {.ptr = 0U, .tail_size = 0U};
+static struct asm_buffer can_write_buffer = {.ptr = 0U, .tail_size = 0U};
 
 // send on CAN
 void comms_can_write(const uint8_t *data, uint32_t len) {
