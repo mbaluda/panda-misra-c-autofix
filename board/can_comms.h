@@ -34,7 +34,7 @@
     which is sent by the host on each start of a connection.
 */
 
-typedef struct {
+typedef struct asm_buffer {
   uint32_t ptr;
   uint32_t tail_size;
   uint8_t data[72];
