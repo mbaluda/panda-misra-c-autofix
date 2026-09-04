@@ -2296,7 +2296,7 @@ __STATIC_FORCEINLINE void SCB_InvalidateICache (void)
   \param[in]   addr    address
   \param[in]   isize   size of memory block (in number of bytes)
 */
-__STATIC_FORCEINLINE void SCB_InvalidateICache_by_Addr (void *addr, int32_t isize)
+__STATIC_FORCEINLINE void SCB_InvalidateICache_by_Addr (uint32_t *addr, int32_t isize)
 {
   #if defined (__ICACHE_PRESENT) && (__ICACHE_PRESENT == 1U)
     if ( isize > 0 ) {
