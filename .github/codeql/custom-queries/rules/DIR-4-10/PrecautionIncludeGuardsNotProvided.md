@@ -43,7 +43,7 @@ The following examples show two ways by which the contents of a header file coul
 ```
 
 ## Agentic Autofix
-When generating a fix for this alert, follow the [instructions for CodeQL Coding Standards](https://github.com/github/codeql-coding-standards/blob/mbaluda-autofix/docs/autofix-instructions.md). These instructions also describe how to handle false-positive exclusions through deviations scoped at the line, file, or project level.
+When generating a fix for this alert, follow the [instructions for CodeQL Coding Standards](https://github.com/mbaluda/panda-misra-c-autofix/tree/master/.github/copilot-instructions.md). These instructions also describe how to handle false-positive exclusions through deviations scoped at the line, file, or project level.
 
 _Notes:_
 1. The identifier used to test and record whether a given header file has already been included shall be unique across all header files in the project.
