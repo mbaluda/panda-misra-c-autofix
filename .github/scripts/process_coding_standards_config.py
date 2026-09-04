@@ -24,7 +24,7 @@ def convert_yaml_dict_to_xml(data, output_file):
 
 
 def process_item(parent, item):
-    if item == None:
+    if item is None:
         return
     assert(isinstance(item, dict))
     for (key, value) in item.items():
@@ -96,7 +96,7 @@ def main():
             "CODEQL_EXTRACTOR_CPP_WIP_DATABASE")
         if not codeql_dist or not codeql_extractor_cpp_wip_database:
             print(
-                f"No active CodeQL database build started. Please run this command either before or after your regular build command.",
+                "No active CodeQL database build started. Please run this command either before or after your regular build command.",
                 file=sys.stderr)
             sys.exit(1)
 
