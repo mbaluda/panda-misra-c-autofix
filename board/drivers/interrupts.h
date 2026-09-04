@@ -1,3 +1,6 @@
+#ifndef DRIVERS_INTERRUPTS_H
+#define DRIVERS_INTERRUPTS_H
+
 #include "board/drivers/drivers.h"
 
 void unused_interrupt_handler(void) {
@@ -79,3 +82,5 @@ void init_interrupts(bool check_rate_limit){
   // Init interrupt timer for a 1s interval
   interrupt_timer_init();
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef DRIVERS_SIMPLE_WATCHDOG_H
+#define DRIVERS_SIMPLE_WATCHDOG_H
+
 #include "board/drivers/drivers.h"
 
 static simple_watchdog_state_t wd_state;
@@ -19,3 +22,5 @@ void simple_watchdog_init(uint32_t fault, uint32_t threshold) {
   wd_state.threshold = threshold;
   wd_state.last_ts = microsecond_timer_get();
 }
+
+#endif

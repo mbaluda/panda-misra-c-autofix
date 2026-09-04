@@ -1,3 +1,6 @@
+#ifndef DRIVERS_TIMERS_H
+#define DRIVERS_TIMERS_H
+
 static void timer_init(TIM_TypeDef *TIM, int psc) {
   register_set(&(TIM->PSC), (psc-1), 0xFFFFU);
   register_set(&(TIM->DIER), TIM_DIER_UIE, 0x5F5FU);
@@ -29,3 +32,5 @@ void tick_timer_init(void) {
   timer_init(TICK_TIMER, (uint16_t)((15.25*APB2_TIMER_FREQ)/8U));
   NVIC_EnableIRQ(TICK_TIMER_IRQ);
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef DRIVERS_HARNESS_H
+#define DRIVERS_HARNESS_H
+
 #include "board/drivers/drivers.h"
 
 struct harness_t harness;
@@ -104,3 +107,5 @@ void harness_init(void) {
   // keep buses connected by default
   set_intercept_relay(false, false);
 }
+
+#endif

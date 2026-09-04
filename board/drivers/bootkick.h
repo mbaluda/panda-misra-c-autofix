@@ -1,3 +1,6 @@
+#ifndef DRIVERS_BOOTKICK_H
+#define DRIVERS_BOOTKICK_H
+
 #include "board/drivers/drivers.h"
 
 bool bootkick_reset_triggered = false;
@@ -66,3 +69,5 @@ void bootkick_tick(bool ignition, bool recent_heartbeat) {
   }
   current_board->set_bootkick(boot_state);
 }
+
+#endif

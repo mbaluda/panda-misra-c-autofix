@@ -1,3 +1,6 @@
+#ifndef DRIVERS_FDCAN_H
+#define DRIVERS_FDCAN_H
+
 #include "board/drivers/drivers.h"
 
 FDCAN_GlobalTypeDef *cans[PANDA_CAN_CNT] = {FDCAN1, FDCAN2, FDCAN3};
@@ -271,3 +274,5 @@ bool can_init(uint8_t can_number) {
   }
   return ret;
 }
+
+#endif

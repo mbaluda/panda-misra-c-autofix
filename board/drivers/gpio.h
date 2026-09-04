@@ -1,3 +1,6 @@
+#ifndef DRIVERS_GPIO_H
+#define DRIVERS_GPIO_H
+
 #define MODE_INPUT 0
 #define MODE_OUTPUT 1
 #define MODE_ALTERNATE 2
@@ -99,3 +102,5 @@ bool detect_with_pull(GPIO_TypeDef *GPIO, int pin, int mode) {
   set_gpio_pullup(GPIO, pin, PULL_NONE);
   return ret;
 }
+
+#endif

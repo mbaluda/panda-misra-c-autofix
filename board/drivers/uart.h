@@ -1,3 +1,6 @@
+#ifndef DRIVERS_UART_H
+#define DRIVERS_UART_H
+
 #include "board/drivers/drivers.h"
 
 // ***************************** Definitions *****************************
@@ -146,4 +149,6 @@ static void hexdump(const void *a, int l) {
   }
   print("\n");
 }
+#endif
+
 #endif

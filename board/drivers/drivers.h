@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DRIVERS_DRIVERS_H
+#define DRIVERS_DRIVERS_H
 
 #include "board/can.h"
 #include "board/health.h"
@@ -282,3 +283,5 @@ static void hexdump(const void *a, int l);
 void usb_init(void);
 void refresh_can_tx_slots_available(void);
 void can_tx_comms_resume_usb(void);
+
+#endif
