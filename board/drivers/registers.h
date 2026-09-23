@@ -74,7 +74,7 @@ void check_registers(void){
 
 void init_registers(void) {
   for(uint16_t i=0U; i<REGISTER_MAP_SIZE; i++){
-    register_map[i].address = (volatile uint32_t *) 0U;
+    register_map[i].address = NULL;
     register_map[i].check_mask = 0U;
   }
 }
